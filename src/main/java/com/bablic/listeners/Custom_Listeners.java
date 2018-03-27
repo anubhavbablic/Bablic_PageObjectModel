@@ -15,18 +15,13 @@ public class Custom_Listeners extends Page implements ITestListener  {
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		
-		if(!CommonUtilities.isTestRunnable(result.getName(), excel)){{
-			
-			throw new SkipException("Run Mode set to NO for TestCase "+result.getName());
-		}
-			
-			
+		
 			
 			
 			
 			
 		}
-	}
+
 
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
