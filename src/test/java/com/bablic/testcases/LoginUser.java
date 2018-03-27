@@ -19,7 +19,7 @@ public class LoginUser extends Page{
 	
 	public void loginuser(Hashtable<String, String> data) throws InterruptedException{
 		
-		if(!CommonUtilities.isTestRunnable("enter_credentials", excel)){
+		if(!CommonUtilities.isTestRunnable("loginuser", excel)){
 			throw new SkipException("Run Mode set to NO");
 			}
 				
