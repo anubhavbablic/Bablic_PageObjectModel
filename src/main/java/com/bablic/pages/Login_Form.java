@@ -15,7 +15,7 @@ public class Login_Form extends Page{
 	
 	public AddNewSite enter_credentials(String Email, String Password) throws InterruptedException {
 		
-	if(!CommonUtilities.isTestRunnable("enter_credentials", excel)){{
+	if(!CommonUtilities.isTestRunnable("enter_credentials", excel)){
 			
 			throw new SkipException("Run Mode set to NO for TestCase Name : enter_credentials");
 		}
@@ -40,6 +40,6 @@ public class Login_Form extends Page{
 		
 		return new AddNewSite();
 
+	
 	}
-
 }
