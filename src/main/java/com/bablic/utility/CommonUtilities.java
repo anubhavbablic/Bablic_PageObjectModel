@@ -3,11 +3,45 @@ package com.bablic.utility;
 import java.lang.reflect.Method;
 import java.util.Hashtable;
 
+
 import org.testng.annotations.DataProvider;
 
 import com.bablic.base.Page;
 
 public class CommonUtilities extends Page {
+	
+	
+	public static boolean isTestRunnable(String testName, ExcelReader excel){
+		
+		
+		int total_rows=excel.getRowCount("TC_RunModes");
+		
+		for(int rNum=2;rNum<total_rows;rNum++){
+			
+			String testCase=excel.getCellData("TC_RunModes", "TCID", rNum);
+			
+			if(testCase.equalsIgnoreCase(testName)){
+				
+				String runMode=excel.getCellData("TC_RunModes", "RunMode", rNum);
+				
+				if(runMode.equalsIgnoreCase("Y"))
+					
+					return true;
+					else
+						return false;
+				}
+			}
+				return false;
+				
+				
+				
+				
+			}
+		
+		
+		
+	
+	
 	
 	
 	@DataProvider(name="dp")
