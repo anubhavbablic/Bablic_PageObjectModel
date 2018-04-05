@@ -48,7 +48,7 @@ public class CommonUtilities extends Page {
 	public Object[][] getData(Method m) {
 
 		String sheetName = m.getName();
-		System.out.println("sheetname");
+		System.out.println(sheetName);
 		int rows = excel.getRowCount(sheetName);
 		int cols = excel.getColumnCount(sheetName);
 

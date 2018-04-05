@@ -26,7 +26,7 @@ public class LoginUser extends Page{
 			
 		
 		Login_Form lf=new Login_Form();
-		AddNewSite add=lf.enter_credentials(data.get("Email"),data.get("Password"));
+		lf.enter_credentials(data.get("Email"),data.get("Password"));
 		
 		
 	}
